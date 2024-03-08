@@ -1,7 +1,7 @@
 from mockito import mock, verify
 import unittest
 
-from PythonApi import helloworld
+from python_api import helloworld
 
 class PythonApiTest(unittest.TestCase):
     def test_should_issue_hello_world_message(self):
