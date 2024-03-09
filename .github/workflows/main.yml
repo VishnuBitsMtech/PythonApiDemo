@@ -71,7 +71,7 @@ jobs:
           python-version: 3.9
 
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@v1
+        uses: sonarsource/sonarcloud-github-action@master
         with:
           organization: "vishnubitsmtech"
           token: "6696969ef06293f5d4ec2aa7e8408c9dec8596e5"
