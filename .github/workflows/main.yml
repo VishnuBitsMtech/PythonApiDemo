@@ -55,4 +55,27 @@ jobs:
 
       - name: List Files  # Optional step
         run: |
-          ls -R 
+          ls -R
+
+  sonarcloud:
+    runs-on: ubuntu-latest
+    needs: [build_and_test]  # Make sure this job runs after the build_and_test job
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@v1
+        with:
+          organization: "vishnubitsmtech"
+          token: "6696969ef06293f5d4ec2aa7e8408c9dec8596e5"
+          args: >
+              -Dsonar.organization=vishnubitsmtech
+              -Dsonar.projectkey=PythonApiDemo
+              -Dsonar.python.coverage.reportPaths=coverage.xml
