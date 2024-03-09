@@ -72,4 +72,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -sonar.organization=vishnubitsmtech
+            -sonar.projectKey=PythonApiDemo
 
