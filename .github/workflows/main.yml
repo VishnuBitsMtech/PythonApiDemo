@@ -77,4 +77,4 @@ jobs:
             -Dsonar.organization=vishnubitsmtech
             -Dsonar.projectKey=PythonApiDemo
             -Dsonar.python.coverage.reportPaths=coverage.xml
-            --Dsonar.branch.name=main
+            -Dsonar.branch.name=main
