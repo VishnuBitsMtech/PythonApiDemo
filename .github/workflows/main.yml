@@ -74,6 +74,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -dsonar.organization=vishnubitsmtech
-            -dsonar.projectKey=PythonApiDemo
+            -Dsonar.organization=vishnubitsmtech
+            -Dsonar.projectKey=PythonApiDemo
 
