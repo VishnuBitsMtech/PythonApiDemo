@@ -57,7 +57,6 @@ jobs:
       - name: List Files  # Optional step
         run: |
           ls -R
-
   SonarCloudSCan:
     runs-on: ubuntu-latest
     steps:
@@ -74,4 +73,3 @@ jobs:
               -Dsonar.organization=vishnubitsmtech
               -Dsonar.projectKey=PythonApiDemo
               -Dsonar.python.coverage.reportPaths=coverage.xml
-
