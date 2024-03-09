@@ -64,17 +64,15 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
         with:
-          python-version: 3.9
+            fetch-depth: 0
 
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
+        env:
+            GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          organization: "vishnubitsmtech"
-          token: "6696969ef06293f5d4ec2aa7e8408c9dec8596e5"
           args: >
               -Dsonar.organization=vishnubitsmtech
               -Dsonar.projectkey=PythonApiDemo
